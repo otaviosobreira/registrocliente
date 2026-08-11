@@ -1,4 +1,4 @@
-package com.otaviosr.registrocliente.exceptions;
+package com.otaviosr.registrocliente.services.exceptions;
 
 public class ResourceNotFundException extends RuntimeException {
 
