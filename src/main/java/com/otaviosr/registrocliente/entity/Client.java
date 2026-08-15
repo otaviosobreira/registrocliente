@@ -1,6 +1,7 @@
 package com.otaviosr.registrocliente.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -83,5 +84,24 @@ public class Client {
 	public void setChildren(Integer children) {
 		this.children = children;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Client other = (Client) obj;
+		return Objects.equals(id, other.id);
+	}
+	
+	
 	
 }
